@@ -7,46 +7,52 @@
   <link rel="stylesheet" href="styles/form2.css">
 </head>
 <body>
-  <h2>Intern Payment Approval Form</h2>
-  <form action="https://formspree.io/f/xpwjneve" method="POST">
-    <label for="manager">Manager Name</label>
-    <input type="text" id="manager" name="orgManager" required>
-    
-    <label for="internName">Intern Name</label>
-    <input type="text" id="internName" name="internName" required>
+  <div class="container">
+    <div class="header">
+    <h2>Intern Payment Approval Form</h2>
+    </div>
+    <form action="https://formspree.io/f/xpwjneve" method="POST">
+      <div class="form-group">
+        <label for="manager">Manager Name</label>
+        <input type="text" id="manager" name="orgManager" required>
+        
+        <label for="internName">Intern Name</label>
+        <input type="text" id="internName" name="internName" required>
 
-    <label for="internId">Intern ID</label>
-    <input type="text" id="internId" name="internId" required>
+        <label for="internId">Intern ID</label>
+        <input type="text" id="internId" name="internId" required>
 
-    <label for="projectName">Project Name</label>
-    <input type="text" id="projectName" name="projectName" required>
+        <label for="projectName">Project Name</label>
+        <input type="text" id="projectName" name="projectName" required>
 
-    <label for="projectId">Project ID</label>
-    <input type="text" id="projectId" name="projectId" required>
+        <label for="projectId">Project ID</label>
+        <input type="text" id="projectId" name="projectId" required>
 
-    <label for="requestId">Request ID</label>
-    <input type="text" id="requestId" name="requestId" required>
+        <label for="requestId">Request ID</label>
+        <input type="text" id="requestId" name="requestId" required>
 
-    <label for="amount">Payment Amount ($)</label>
-    <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+        <label for="amount">Payment Amount ($)</label>
+        <input type="number" id="amount" name="amount" min="0" step="0.01" required>
 
-    <label for="employmentType">Employment Type</label>
-    <select id="employmentType" name="employmentType" required>
-      <option value="">-- Select Type --</option>
-      <option value="Full-time">Full-time</option>
-      <option value="Part-time">Part-time</option>
-      <option value="Contract">Contract</option>
-      <option value="Internship">Internship</option>
-    </select>
+        <label for="employmentType">Employment Type</label>
+        <select id="employmentType" name="employmentType" required>
+          <option value="">-- Select Type --</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Contract">Contract</option>
+          <option value="Internship">Internship</option>
+        </select>
 
-    <label for="invoice">Invoice Approval</label>
-    <select id="invoice" name="invoice" required>
-      <option value="">-- Select --</option>
-      <option value="Approved">✅ Approved</option>
-      <option value="Rejected">❌ Rejected</option>
-    </select>
+        <label for="invoice">Invoice Approval</label>
+        <select id="invoice" name="invoice" required>
+          <option value="">-- Select --</option>
+          <option value="Approved">✅ Approved</option>
+          <option value="Rejected">❌ Rejected</option>
+        </select>
 
-    <button type="submit">Submit Approval</button>
-  </form>
+        <button type="submit" class="submit-btn" id="submitBtn"> 📋 Submit Approval</button>
+      </div>  
+    </form>
+  </div>
 </body>
 </html>
