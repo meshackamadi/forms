@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Evaluation Form</title>
+  <link rel="stylesheet" href="styles/form1.css">
+  <script rel="stylesheet" href="scripts/form1.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Intern Payment Evaluation</h1>
+      <p>Determine if your intern should be paid based on labor guidelines</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showSection('form')">Evaluation Form</button>
+      <button class="tab" onclick="showSection('analytics')">Analytics & Results</button>
+    </div>
+
+    <div class="content">
+      <div class="section active" id="form">
+        <div class="success-message" id="successMessage">
+          <h3>✅ Evaluation Submitted Successfully!</h3>
+          <p>Your intern payment recommendation has been recorded.</p>
+        </div>
+      </div>
+
+      <form id="internEvaluationForm" onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label for="companyName">Company Name *</label>
+          <input type="text" id="companyName" name="companyName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="evaluatorEmail">Your Email *</label>
+          <input type="email" id="evaluatorEmail" name="evaluatorEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="internName">Intern Name</label>
+          <input type="text" id="internName" name="internName">
+        </div>
+
+        <div class="form-group">
+          <label for="internshipDuration">Internship Duration</label>
+          <select id="internshipDuration" name="internshipDuration" required>
+            <option value="">Select duration</option>
+            <option value="1-4 weeks">1-4 weeks</option>
+            <option value="1-3 months">1-3 months</option>
+            <option value="3-6 months">3-6 months</option>
+            <option value="6+ months">6+ months</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Does the intern perform work that directly benefits your business? *</label>
+          <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="workBenefit_yes" name="workBenefit" value="yes" required>
+                <label for="workBenefit_yes">Yes - They do productive work that helps our business</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="workBenefit_no" name="workBenefit" value="no" required>
+                <label for="workBenefit_no">No - They're primarily observing and learning</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>What type of internship is this? *</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="internType_academic" name="internType" value="academic" required>
+              <label for="internType_academic">Academic credit internship (college/university program)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="internType_vocational" name="internType" value="vocational">
+              <label for="internType_vocational">Vocational/training program</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="internType_general" name="internType" value="general">
+              <label for="internType_general">General work experience/career exploration</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>What tasks does the intern primarily perform? (Check all that apply) *</label>
+          <div class="checkbox-group">
+            <div class="checkbox-option">
+              <input type="checkbox" id="task_administrative" name="tasks" value="administrative">
+              <label for="task_administrative">Administrative/clerical work</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="task_customer" name="tasks" value="customer">
+              <label for="task_customer">Customer service/client interaction</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="task_production" name="tasks" value="production">
+              <label for="task_production">Production/manufacturing work</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="task_professional" name="tasks" value="professional">
+              <label for="task_professional">Professional skill development projects</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="task_observation" name="tasks" value="observation">
+              <label for="task_observation">Observation and shadowing</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="task_training" name="tasks" value="training">
+              <label for="task_training">Training and educational activities</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="hoursPerWeek">Hours per week</label>
+          <select id="hoursPerWeek" name="hoursPerWeek" required>
+            <option value="">Select hours</option>
+            <option value="1-10">1-10 hours</option>
+            <option value="11-20">11-20 hours</option>
+            <option value="21-30">21-30 hours</option>
+            <option value="31-40">31-40 hours</option>
+            <option value="40+">40+ hours</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="additionalInfo">Additional Information</label>
+          <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any other relevant details about the internship..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn"> 📋 Submit Evaluation </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
