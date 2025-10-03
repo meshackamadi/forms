@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <!-- use Math.random() to automatically generate numbers from between 0 to 1-->
+    <button onclick="
+    const randomNumber = Math.random();
+    let computerMove = '';
+    
+    /* This code sections the numbers between 0 to 1 into 3 parts, this enable the algorithm decide which number falls under each category(rock, paper or scissors). If the random number falls between 0 to 1/3 the number automatically falls under the rock category and that is what the computer will choose. If a the random number falls between 1/3 to 2/3 paper is selected by the computer, and if a random number is selected and it falls betweeen 2/3 to 3/3 scissors is chosen. */
+    if (randomNumber >= 0 && randomNumber < 1 / 3){
+    computerMove = 'rock';
+    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3){
+    computerMove = 'paper';
+     } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+      computerMove = 'scissors';
+      }
+
+      console.log(computerMove);
+
+      let result = '';
+
+      /* Comparing user's move to the computer's move. */
+      if (computerMove === 'rock') {
+      result = 'Tie.';
+      } else if (computerMove === 'paper') {
+       result = 'You Lose!';
+       } else if (computerMove === 'scissors') {
+       result = 'You win';
+       }
+
+       /* Displaying result*/ 
+       alert(`You pick rock, Computer picked ${computerMove}. ${result}.`)
+
+    ">Rock</button>
+
+    <button onclick="
+      const randomNumber = Math.random();
+      let computerMove = '';
+      
+      /* This code sections does the same task as earlier stated, only configure computer's move to the user's move and change response to display tie if paper is chosen by both the computer and the user, and so forth. */
+      if (randomNumber >= 0 && randomNumber < 1 / 3){
+      computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3){
+      computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+        }
+
+        console.log(computerMove);
+
+        let result = '';
+
+        /* Comparing user's move to the computer's move. */
+        if (computerMove === 'rock') {
+        result = 'You Win!.';
+        } else if (computerMove === 'paper') {
+        result = 'Tie.';
+        } else if (computerMove === 'scissors') {
+        result = 'You Lose!';
+        }
+
+        /* Displaying result*/ 
+        alert(`You pick Paper, Computer picked ${computerMove}. ${result}.`)
+
+    ">Papper</button>
+
+    <button onclick="
+      const randomNumber = Math.random();
+      let computerMove = '';
+      
+      /* This code sections does the same task as earlier stated, only configure computer's move to the user's move and change response to display tie if scissors is chosen by both the computer and the user, and so forth. */
+      if (randomNumber >= 0 && randomNumber < 1 / 3){
+      computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3){
+      computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+        }
+
+        console.log(computerMove);
+
+        let result = '';
+
+        /* Comparing user's move to the computer's move. */
+        if (computerMove === 'rock') {
+        result = 'You Lose.';
+        } else if (computerMove === 'paper') {
+        result = 'You Win!.';
+        } else if (computerMove === 'scissors') {
+        result = 'Tie.';
+      }
+
+        /* Displaying result*/ 
+        alert(`You pick Scissors, Computer picked ${computerMove}. ${result}.`)
+
+    ">Scissors</button>
+    <script>
+
+    </script>
+  </body>
+</html>
